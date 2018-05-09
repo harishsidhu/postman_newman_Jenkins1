@@ -1,0 +1,14 @@
+{
+  "name": "postman_newman_jenkins",
+  "version": "1.0.0",
+  "description": "project for storing postman tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "harish",
+  "license": "ISC",
+  "dependencies": {
+    "newman": "^3.9.3"
+  }
+}

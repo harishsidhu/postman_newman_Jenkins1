@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "7a844056-a9ba-4ab8-91e1-bfdf10e514f4",
+		"name": "harish.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://jsonplaceholder.typicode.com/posts?userId=1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7ddbabbf-985d-4739-a670-b1a9593285e1",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"qui est esse\");",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts?userId=1",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://jsonplaceholder.typicode.com/posts/1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8cb2f824-e80b-4131-895e-b56afe40b98b",
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"]= responseCode.code === 200;",
+							"",
+							"",
+							"pm.test(\"Response time is less than 200ms\", function ()  {",
+							"  pm.response.to.be.ok;",
+							"});"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": "https://jsonplaceholder.typicode.com/posts/1"
+			},
+			"response": []
+		}
+	]
+}
