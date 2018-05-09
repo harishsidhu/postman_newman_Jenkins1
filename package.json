@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "project for storing postman tests",
   "scripts": {
-    "test": "newman run tests/harish.com.postman_collection"
+    "API-test": "newman run tests/harish.com.postman_collection"
   },
   "author": "harish",
   "dependencies": {
